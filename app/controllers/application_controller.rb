@@ -9,6 +9,9 @@ get "/" do
 end
 
 post "/team" do
+  @team = Team.new(params:team)
 
-erb :"super_hero
+
+erb :super_hero
+end
 end
