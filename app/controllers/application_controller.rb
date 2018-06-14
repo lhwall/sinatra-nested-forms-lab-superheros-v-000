@@ -11,6 +11,11 @@ end
 post "/team" do
   @team = Team.new(params:team)
 
+ params[:team][:members].each do |members|
+   Hero.new(members)
+ end 
+
+   @heroes = Hero.all
 
 erb :super_hero
 end
